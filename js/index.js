@@ -13,3 +13,16 @@ roadMap.forEach((element) => {
         element.style.transform = "scale(1)";
     })
 });
+
+//Keydown and keyup
+const body = document.querySelector('body');
+
+body.addEventListener('keydown', function() {
+    body.style.transform = "rotate(180deg)";
+})
+
+body.addEventListener("keyup", function() {
+    body.style.transform = "rotate(0deg)";
+}
+
+)
