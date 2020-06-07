@@ -23,6 +23,18 @@ body.addEventListener('keydown', function() {
 
 body.addEventListener("keyup", function() {
     body.style.transform = "rotate(0deg)";
-}
+})
 
-)
+//wheel and double click
+
+body.addEventListener('wheel', function() {
+    body.style.transform = "scale(1.6)";
+    body.style.transition ="2s";
+
+})
+
+body.addEventListener('dblclick', function() {
+    body.style.transform = 'scale(1)';
+
+})
+
