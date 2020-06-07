@@ -27,14 +27,33 @@ body.addEventListener("keyup", function() {
 
 //wheel and double click
 
-body.addEventListener('wheel', function() {
+/* body.addEventListener('wheel', function() {
     body.style.transform = "scale(1.6)";
     body.style.transition ="2s";
 
-})
+}) */
 
 body.addEventListener('dblclick', function() {
     body.style.transform = 'scale(1)';
 
 })
 
+//building a textbox for blur
+
+const navCont = document.querySelector('.nav-container');
+
+var box = document.createElement('input');
+box.type = "text";
+box.placeholder = "click here";
+navCont.appendChild(box);
+
+const clickHere = document.querySelector('input[type="text"]');
+
+clickHere.addEventListener('focus', (event) => {
+    event.target.style.background = "yellow";
+
+})
+
+clickHere.addEventListener('blur', (event) =>{
+    event.target.style.background = "";
+})
