@@ -25,18 +25,19 @@ body.addEventListener("keyup", function() {
     body.style.transform = "rotate(0deg)";
 })
 
-//wheel and double click
+//wheel and double click and nested function
 
-/* body.addEventListener('wheel', function() {
+ body.addEventListener('wheel', function() {
     body.style.transform = "scale(1.6)";
     body.style.transition ="2s";
-
-}) */
-
-body.addEventListener('dblclick', function() {
+    body.addEventListener('dblclick', function() {
     body.style.transform = 'scale(1)';
 
 })
+
+
+}) 
+
 
 //building a textbox for blur
 
@@ -68,3 +69,17 @@ window.addEventListener('scroll', () => {
         alert('IT IS TIME TO PLAN YOUR TRIP. CALL US AT 1-800-555=5555');
     }
 })
+
+// adding copy event to window
+
+const source = window.addEventListener('copy', (event) => {
+    alert("COPY IS NOT ALLOWED ON THIS WEBSITE");
+})
+
+// using preventDefault
+
+homelink = document.querySelector(".nav-link");
+
+homelink.addEventListener('click', function(event) {
+    event.preventDefault();
+}) 
