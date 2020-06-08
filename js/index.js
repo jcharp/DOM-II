@@ -57,3 +57,14 @@ clickHere.addEventListener('focus', (event) => {
 clickHere.addEventListener('blur', (event) =>{
     event.target.style.background = "";
 })
+
+// adding scroll event to window
+
+window.addEventListener('scroll', () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+
+    if(scrolled === scrollable) {
+        alert('IT IS TIME TO PLAN YOUR TRIP. CALL US AT 1-800-555=5555');
+    }
+})
