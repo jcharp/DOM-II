@@ -23,3 +23,17 @@ body.addEventListener('keydown', () => {
 body.addEventListener('keyup', () => {
     body.style.transform = 'rotate(0deg)';
 })
+
+const navContainer = document.querySelector('.nav-container');
+let box = document.createElement('input');
+box.type = "text";
+box.placeholder ="Click Me";
+navContainer.appendChild(box);
+
+box.addEventListener('focus', () => {
+    box.style.background = 'blue';
+})
+
+box.addEventListener('blur', () => {
+    box.style.background = '';
+})
