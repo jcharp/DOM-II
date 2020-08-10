@@ -69,3 +69,20 @@ window.addEventListener('scroll', () => {
         alert('IT IS TIME TO PLAN YOUR TRIP. CALL US AT 1-800-555=5555');
     }
 })
+
+//adding click event to tex contents to turn to italics
+
+const textContent = document.querySelectorAll('.text-content');
+textContent.forEach((e) => {
+    e.addEventListener('click', () => {
+        e.style.fontStyle = "italic";
+    })
+})
+
+// adding double click to return text to normal
+
+textContent.forEach((e) => {
+    e.addEventListener('dblclick', () => {
+        e.style.fontStyle = "normal";
+    })
+})
