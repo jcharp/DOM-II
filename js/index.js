@@ -74,8 +74,10 @@ window.addEventListener('scroll', () => {
 
 const textContent = document.querySelectorAll('.text-content');
 textContent.forEach((e) => {
-    e.addEventListener('click', () => {
-        e.style.fontStyle = "italic";
+    e.addEventListener('click', (b) => {
+       b.stopPropagation();
+        e.style.background = "yellow";
+       
     })
 })
 
@@ -83,6 +85,28 @@ textContent.forEach((e) => {
 
 textContent.forEach((e) => {
     e.addEventListener('dblclick', () => {
-        e.style.fontStyle = "normal";
+        e.style.background = "";
     })
 })
+
+//nesting click for stop propogation task
+
+const home = document.querySelector('.home');
+
+home.addEventListener('click', (e) => {
+  
+   home.style.fontStyle = "italic";
+  
+
+})
+
+home.addEventListener('dblclick', () => {
+    home.style.fontStyle = "normal";
+ })
+
+ const links = document.querySelectorAll('a');
+ links.forEach((e) => {
+     e.addEventListener('click', (b) => {
+         b.preventDefault();
+     })
+ })
